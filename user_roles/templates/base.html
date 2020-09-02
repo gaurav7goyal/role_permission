@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Refresh after one hours-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstarp css  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link  rel="stylesheet" type="text/css" href="{% static 'css/material_fonts.css' %}">
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}" ></script>
+    {% block extra_head %}{% endblock %}
+	<!--  Base title Define  -->
+	<title>Rta-Mini- {% block title %}{% endblock %}</title>
+</head>
+<body>
+	<!--  nav bar define-->
+    
+    {% include './particle/_navbar.html' %}
+   
+
+	<!-- body container define-->
+	<div class="container-fluid">
+
+    {% block content %}
+
+    {%  endblock content %}
+    </div>
+
+    <!-- footer define-->
+    
+    {% block scripts %}
+    <!-- Deafult Bootstrap and jquery js define-->
+    {% endblock %}
+</body>
+
+</html>

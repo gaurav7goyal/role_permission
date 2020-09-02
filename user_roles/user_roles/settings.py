@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'crispy_forms',
+    'rolepermissions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
      ### my local app######
     'user.apps.UserConfig',
 ]
-
+AUTH_USER_MODEL = 'user.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,7 +56,8 @@ MIDDLEWARE = [
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ROOT_URLCONF = 'user_roles.urls'
-ROLEPERMISSIONS_MODULE = 'user.roles'
+ROLEPERMISSIONS_MODULE = 'user_roles.roles'
+#ROLEPERMISSIONS_REGISTER_ADMIN = True
 
 TEMPLATES = [
     {

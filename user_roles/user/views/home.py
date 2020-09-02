@@ -10,4 +10,5 @@ from rolepermissions.roles import get_user_roles
 
 @login_required
 def home(request):
+	
 	return HttpResponse('home page')
